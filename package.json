@@ -1,0 +1,22 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "Um portal de divulgação de notícias",
+  "main": "file01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RCOliveira98/portal_noticias.git"
+  },
+  "author": "Romário Coelho Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RCOliveira98/portal_noticias/issues"
+  },
+  "homepage": "https://github.com/RCOliveira98/portal_noticias#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
