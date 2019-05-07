@@ -5,11 +5,20 @@ var my_app = my_express();
  * estamos avisando ao xpress que o ejs cuidará da propriedade view engime
  */
 my_app.set('view engine', 'ejs');
-
+// renderizar page home
 my_app.get('/', (req, resp)=>{
-    resp.send('<body><header><title>Express</title></header><body><h1>Home</h1></body></body>')
+    // o método render é proporcionado pelo ejs.
+    resp.render('home/index.ejs');
 });
-
+// render noticias
+my_app.get('/noticias', (req, resp)=> {
+    resp.render('noticias/noticias.ejs');
+})
+// renderizar page de cadastro de novas tecnologias
+my_app.get('/new-noticia', (req, resp)=>{
+    resp.render('admin/form_add_noticia.ejs');
+})
+// renderizar page tecnologia
 my_app.get('/tecnologia', (req, resp)=>{
     resp.render('secao/tecnologia.ejs');
 });
