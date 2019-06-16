@@ -1,6 +1,7 @@
 let mysql = require('mysql');
 
-module.exports = function() {
+let mysql_connect = function() {
+    console.log('conectando com BD');
     return mysql.createConnection(
         {
             host: 'localhost',
@@ -9,4 +10,8 @@ module.exports = function() {
             database: 'portal'
         }
     );
+}
+
+module.exports = function() {
+    return mysql_connect;
 }
