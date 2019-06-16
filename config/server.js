@@ -10,6 +10,7 @@ let my_consign = require('consign');
 my_consign()
 .include('app/routes')
 .then('config/dbConection.js')
+.then('app/models')
 .into(my_app);
 
 module.exports = my_app;
