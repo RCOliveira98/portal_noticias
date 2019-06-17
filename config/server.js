@@ -1,4 +1,5 @@
-let my_app = require('express')();
+let my_express = require('express');
+let my_app = my_express();
 let my_consign = require('consign');
 let body_parser = require('body-parser');
 // let express_validator = require('express-validator');
@@ -10,6 +11,9 @@ my_app.set('view engine', 'ejs');
 my_app.set('views', './app/views');
 // middlware
 my_app.use(body_parser.urlencoded({extended: true}));
+my_app.use(my_express.static('./public'));
+
+
 
 my_consign()
 .include('app/routes')
