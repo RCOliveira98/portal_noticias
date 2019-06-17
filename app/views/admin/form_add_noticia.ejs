@@ -10,21 +10,45 @@
 		<br />
 		<div class='container'>
 		<form action='/noticias/salvar' method='post'>
-		   <div class="field">
-			<label class="label">Título</label>
-			<div class="control">
-				<input id='titulo' name='titulo' class="input" type="text" placeholder="Título da notícia">
+		   <div>
+			<label>Título</label>
+			<div>
+				<input id='titulo' name='titulo' type="text" placeholder="Título da notícia">
 			</div>
 		   </div>
-		   <div class="field">
-				<label class="label">Descrição da noticia</label>
-				<div class="control">
-					<textarea id='noticia' name='noticia' class="textarea" placeholder="Conteúdo da notícia" cols='30' rows='5'></textarea>
+
+		   <div>
+				<label>Descrição da noticia</label>
+				<div>
+					<textarea id='noticia' name='noticia' placeholder="Conteúdo da notícia" cols='30' rows='5'></textarea>
 				</div>
+		  </div>
+
+		    <div>
+				<label>Nome do autor</label>
+					<div>
+						<input id='nome_autor' name='nome_autor' type="text" placeholder="Nome do autor">
+					</div>
+			    </div>
 			</div>
 
-			<div class="control">
-				<button class="button is-link">Enviar</button>
+		   <div>
+				<label >resumo da noticia</label>
+				<div>
+					<textarea id='resumo' name='resumo' placeholder="Conteúdo do resumo notícia" cols='30' rows='5'></textarea>
+				</div>
+		  </div>
+
+		  <div>
+				<label>Data do fato</label>
+					<div>
+						<input id='data_registro' name='data_registro' type="date">
+					</div>
+			    </div>
+			</div>
+
+			<div>
+				<button>Enviar</button>
 			</div>
 		</form>
 		</div>

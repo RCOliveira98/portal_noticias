@@ -1,9 +1,11 @@
 module.exports = function(my_app) {
     // render noticias
     my_app.get('/noticias', (req, resp)=> {
-        let my_connection = my_app.config.dbConection();
-        let noticiaModel = new my_app.app.models.NoticiaDao(my_connection);
+        my_app.app.controllers.noticiaController.get_noticias(my_app, req, resp);
+    });
 
-        noticiaModel.getNoticiasAll((erro, sucess) => resp.render('noticias/noticias', {noticias: sucess}));
+    // render noticia
+    my_app.get('/noticia/:id', (req, resp)=> {
+        my_app.app.controllers.noticiaController.get_noticia_by_id(my_app, req, resp);
     });
 }
