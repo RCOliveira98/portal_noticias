@@ -1,4 +1,4 @@
-module.exports.formulario = function(my_app, req, resp){
+module.exports.formulario = function(resp){
     resp.render('admin/form_add_noticia.ejs');
 }
 
