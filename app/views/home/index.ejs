@@ -46,7 +46,7 @@
 	    		<div class="col-md-8">
 	    			<div class="noticia_wrapper">
 		    			<span class="noticia_autor">Por <%= noticias[0].nome_autor %></span>
-		    			<a href="noticia.html" class="noticia_titulo"><%= noticias[0].titulo %></a>
+		    			<a href="noticia?id=<%=noticias[0].id%>" class="noticia_titulo"><%= noticias[0].titulo %></a>
 		    			<span class="noticia_data"><%= noticias[0].data_registro %></span>
 		    			<br />
 		    			<p class="noticia_resumo">
@@ -58,7 +58,7 @@
 	    		<div class="col-md-4">
 	    			<div class="noticia_wrapper">
 		    			<span class="noticia_autor">Por <%= noticias[1].nome_autor %></span>
-		    			<a href="noticia.html" class="noticia_titulo"><%= noticias[1].titulo %>/a>
+		    			<a href="noticia?id=<%= noticias[1].id%>" class="noticia_titulo"><%= noticias[1].titulo %>/a>
 		    			<span class="noticia_data"><%= noticias[1].data_registro %></span>
 
 		    			<br />
@@ -74,7 +74,7 @@
 	    		<div class="col-md-4">
 	    			<div class="noticia_wrapper">
 		    			<span class="noticia_autor">Por <%= noticias[i].nome_autor %></span>
-		    			<a href="noticia.html" class="noticia_titulo"><%= noticias[i].titulo %></a>
+		    			<a href="noticia?id=<%=noticias[i].id%>" class="noticia_titulo"><%= noticias[i].titulo %></a>
 		    			<span class="noticia_data"><%= noticias[i].data_registro %></span>
 		    			<br />
 		    			<p class="noticia_resumo">

@@ -7,8 +7,8 @@ NoticiaDao.prototype.getNoticiasAll = function (callback) {
    this._connect.query('select * from noticia order by data_registro desc', callback);
 }
 
-NoticiaDao.prototype.getNoticiaById = function(callback) {
-    this._connect.query('select * from noticia where id = 2', callback);
+NoticiaDao.prototype.getNoticiaById = function(search_id, callback) {
+    this._connect.query('select * from noticia where id = ' + search_id, callback);
 }
 
 NoticiaDao.prototype.saveNotice =  function(new_notice, callback) {
