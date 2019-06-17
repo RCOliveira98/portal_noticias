@@ -8,10 +8,10 @@ module.exports = function(my_app) {
 
     my_app.post('/noticias/salvar', (req, resp)=>{
         let new_notice = req.body;
-
         let my_connection = my_app.config.dbConection();
-        let noticiaModel = my_app.app.models.noticiaModel;
 
-        noticiaModel.saveNotice(new_notice, my_connection, (erro, sucess) => resp.redirect('/noticias'));
+        let noticiaModel = new my_app.app.models.NoticiaDao(my_connection);
+
+        noticiaModel.saveNotice(new_notice, (erro, sucess) => resp.redirect('/noticias'));
     });
 }
