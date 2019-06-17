@@ -7,5 +7,9 @@ module.exports = function() {
         conection.query('select * from noticia', callback);
     }
 
+    this.saveNotice =  (new_notice, conection, callback) => {
+        conection.query('insert into noticia set ?', new_notice, callback);
+    }
+
     return this;
 }
